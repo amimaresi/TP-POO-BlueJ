@@ -8,13 +8,23 @@ public class CompteRenduExercice implements CompteRendu{
         float sum=0;
         for (Integer note : exo) { 		      
            sum+=note;
-      }
-      return sum/exo.size();
+        }
+        return sum/exo.size();
     }
-    public float getNoteTotale(){return 0;}
+    //////////////////////////////////////////  
+    public float getNoteTotale(){
+        float sum=0;
+        for (var exo : notes.entrySet()) {
+            sum+=getNoteExo(exo.getKey());
+
+        }
+        return sum/notes.size();
+    }
+    ///////////////////////////////////////
     public ArrayList<Integer> getNoteTentatives(String consigne,int index){
         return notes.get(consigne);
     }
+    //////////////////////////////////////////////
     public void setNoteTentative(String consigne,int index,int note){
         notes.get(consigne).add(note);
     }
