@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Consultation
+comment1.params=date
+comment1.target=Consultation(java.time.LocalDate)
+numComments=2
