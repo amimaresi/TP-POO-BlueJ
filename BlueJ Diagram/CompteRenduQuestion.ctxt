@@ -1,9 +1,11 @@
 #BlueJ class context
 comment0.target=CompteRenduQuestion
-comment1.params=consigne
-comment1.target=float\ getNoteQuestion(java.lang.String)
-comment2.params=
-comment2.target=float\ getNoteTotale()
-comment3.params=consigne\ note
-comment3.target=void\ setNoteQuestion(java.lang.String,\ int)
-numComments=4
+comment1.params=notes
+comment1.target=CompteRenduQuestion(java.util.HashMap)
+comment2.params=consigne
+comment2.target=float\ getNoteQuestion(java.lang.String)
+comment3.params=
+comment3.target=float\ getNoteTotale()
+comment4.params=consigne\ note
+comment4.target=void\ setNoteQuestion(java.lang.String,\ int)
+numComments=5

@@ -1,7 +1,11 @@
 #BlueJ class context
 comment0.target=CabinetOrtho
-comment1.params=nom\ adresse
-comment1.target=CabinetOrtho(java.lang.String,\ java.lang.String)
-comment2.params=nom
-comment2.target=CabinetOrtho(java.lang.String)
-numComments=3
+comment1.params=nom
+comment1.target=CabinetOrtho(java.lang.String)
+comment2.params=date\ type\ patient
+comment2.target=void\ creerRendezVous(int[],\ boolean,\ Patient)
+comment3.params=date\ patient
+comment3.target=void\ creerRendezVous(int[],\ Patient)
+comment4.params=date\ patients
+comment4.target=void\ creerRendezVous(int[],\ java.util.ArrayList)
+numComments=5

@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DossierPatient {
-    int id; // DossierPatient id
     Patient patient;
     NewBO nouveauBO;
     ArrayList<RendezVous> rendezVousList; 
@@ -15,15 +14,8 @@ public class DossierPatient {
         };
         return false;
     }
-    public void creerRendezVous(int id,int[]date,boolean type){
-        rendezVousList.add(new Suivi(id,date,patient,type));
-    }
-    public void creerRendezVous(int id,int[]date){
-        rendezVousList.add(new Consultation(id,date,patient));
-    }
-    public void creerRendezVous(int id,int[]date,ArrayList<Patient> patients){
-        rendezVousList.add(new Consultation(id,date,patients));
-    }
+   
+    public void addRendezVous(RendezVous rdv){rendezVousList.add(rdv);}
     
     public boolean setFicheSuivi(int id,FicheSuivi fs){
         if(rendezVousList.contains(id) && rendezVousList.get(id).getClass()==Suivi.class) {
