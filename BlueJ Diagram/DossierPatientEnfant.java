@@ -1,2 +1,2 @@
-public abstract class DossierPatientEnfant extends DossierPatient{
+public class DossierPatientEnfant extends DossierPatient{
 }

@@ -1,3 +1,5 @@
 #BlueJ class context
 comment0.target=Atelier
-numComments=1
+comment1.params=date\ patients
+comment1.target=Atelier(int[],\ java.util.ArrayList)
+numComments=2

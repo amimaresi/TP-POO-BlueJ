@@ -4,7 +4,9 @@ public class CabinetOrtho{
     String nom;
     String adresse;
     ArrayList<DossierPatient> dossiers;
-    CompteOrtho[] comptes;
+    CompteOrtho comptes[];
+    int currentRDVid;
+    int currentDPid;
     public CabinetOrtho(String nom,String adresse){
         this.nom=nom;
         this.adresse=adresse;

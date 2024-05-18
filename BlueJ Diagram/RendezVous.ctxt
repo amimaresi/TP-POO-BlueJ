@@ -1,9 +1,7 @@
 #BlueJ class context
 comment0.target=RendezVous
-comment1.params=
-comment1.target=RendezVous()
-comment2.params=date\ durree
-comment2.target=RendezVous(java.time.LocalDate,\ java.time.LocalTime)
-comment3.params=type\ date\ durree
-comment3.target=RendezVous\ creerRendezVous(RendezVous.Type,\ java.time.LocalDate,\ java.time.LocalTime)
-numComments=4
+comment1.params=observation
+comment1.target=void\ setObservation(java.lang.String)
+comment2.params=
+comment2.target=int\ getId()
+numComments=3
