@@ -4,29 +4,34 @@ import java.util.HashMap;
 public class DossierPatient {
     Patient patient;
     NewBO nouveauBO;
-    ArrayList<RendezVous> rendezVousList; 
+    HashMap<Integer,RendezVous> rendezVousList;
+    int lastRdvId;
+    int lastSuivi;
     HashMap<Integer,BO> BOList;  // integer is RendezVous id
-    HashMap<Integer,FicheSuivi> ficheSuiviList; // integer is RendezVous id
     public boolean setBO(int id,BO bo){
-        if(rendezVousList.contains(id)) {
+        if(rendezVousList.containsKey(id)) {
             BOList.put(id,bo);
             return true;
         };
         return false;
     }
    
-    public void addRendezVous(RendezVous rdv){rendezVousList.add(rdv);}
+    public void addRendezVous(RendezVous rdv){
+        rendezVousList.put(rdv.getId(),rdv);
+        lastRdvId=rdv.getId();
+        if(rdv instanceof Suivi) lastSuivi=rdv.getId();
+    }
     
     public boolean setFicheSuivi(int id,FicheSuivi fs){
-        if(rendezVousList.contains(id) && rendezVousList.get(id).getClass()==Suivi.class) {
-            ficheSuiviList.put(id,fs);
+        if(rendezVousList.containsKey(id) && rendezVousList.get(id) instanceof Suivi) {
+            ((Suivi)rendezVousList.get(id)).setFicheSuivi(fs);
             return true;
         };
         return false;
     }
     
     public RendezVous getRendezVous(int id){
-        return rendezVousList.contains(id)?rendezVousList.get(id):null;
+        return rendezVousList.containsKey(id)?rendezVousList.get(id):null;
     }
     
     public BO getBO(int id){
@@ -34,21 +39,16 @@ public class DossierPatient {
     }
     
     public FicheSuivi getFicheSuivi(int id){
-        return ficheSuiviList.containsKey(id)?ficheSuiviList.get(rendezVousList.get(id)):null;
+        return rendezVousList.containsKey(id) && rendezVousList.get(id) instanceof Suivi ? ((Suivi)rendezVousList.get(id)).getFicheSuivi():null;
     }
     
-    public RendezVous getLastRendezVous(){return rendezVousList.get(rendezVousList.size()-1);}
+    public RendezVous getLastRendezVous(){return rendezVousList.get(lastRdvId);}
     
     public BO getLastBO(){
-        return BOList.get(rendezVousList.get(rendezVousList.size()-1).getId());
+        return BOList.get(rendezVousList.get(lastRdvId));
     }
     
-    public FicheSuivi getLastFicheSuivi(){ // need to check that RDV is not Atelier
-        for (int i = rendezVousList.size() - 1; i >= 0; i--) {
-            if (rendezVousList.get(i).getClass()==Suivi.class) {
-                return ficheSuiviList.get(rendezVousList.get(i).getId());
-            }
-        }
-        return null;
+    public FicheSuivi getLastFicheSuivi(){ 
+        return ((Suivi)rendezVousList.get(lastSuivi)).getFicheSuivi();
     }
 }

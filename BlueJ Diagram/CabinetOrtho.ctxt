@@ -2,10 +2,10 @@
 comment0.target=CabinetOrtho
 comment1.params=nom
 comment1.target=CabinetOrtho(java.lang.String)
-comment2.params=date\ type\ patient
-comment2.target=void\ creerRendezVous(int[],\ boolean,\ Patient)
-comment3.params=date\ patient
-comment3.target=void\ creerRendezVous(int[],\ Patient)
-comment4.params=date\ patients
-comment4.target=void\ creerRendezVous(int[],\ java.util.ArrayList)
+comment2.params=date\ heure\ type\ patient
+comment2.target=void\ creerRendezVous(int[],\ int[],\ boolean,\ Patient)
+comment3.params=date\ heure\ patient
+comment3.target=void\ creerRendezVous(int[],\ int[],\ Patient)
+comment4.params=date\ heure\ patients
+comment4.target=void\ creerRendezVous(int[],\ int[],\ java.util.ArrayList)
 numComments=5
