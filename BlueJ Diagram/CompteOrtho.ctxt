@@ -1,5 +1,0 @@
-#BlueJ class context
-comment0.target=CompteOrtho
-comment1.params=nom\ prenom\ adresse\ tel\ email\ password
-comment1.target=CompteOrtho(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ java.lang.String)
-numComments=2

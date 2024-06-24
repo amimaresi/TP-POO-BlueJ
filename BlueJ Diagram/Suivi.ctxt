@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Suivi
-comment1.params=id\ date\ heure\ patient\ type
-comment1.target=Suivi(int,\ int[],\ int[],\ Patient,\ boolean)
-comment2.params=ficheSuivi
-comment2.target=void\ setFicheSuivi(FicheSuivi)
-comment3.params=
-comment3.target=FicheSuivi\ getFicheSuivi()
-numComments=4
